@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}تسجيل حساب جديد | متجر القوالب الذكية{% endblock %}
+{% load static %}
+{% block content %}
+<section class="register-screen" dir="rtl">
+    <div class="row d-flex justify-content-center py-4">
+        <div class="col-xl-5 col-lg-6 col-md-8 col-10">
+            <div class="card py-4 px-2">
+                <div class="text-center fw-bold mb-4 mt-2">تسجيل حساب جديد</div>
+                <form action="{% url 'register' %}" class="myform" method="POST">
+                    {% csrf_token %}
+                    {% if error %}
+                    <div class="error pb-3"><i class="fa-solid fa-triangle-exclamation"></i> {{ error }}</div>
+                    {% endif %}
+                    <div class="col-md-8 form-group mx-auto">
+                        <input type="username" class="form-control" name="username" placeholder="اسم المستخدم">
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-5 form-group">
+                            <input type="text" class="form-control" name="first_name" placeholder="الاسم الاول">
+                        </div>    
+                        <div class="col-md-5 form-group">
+                            <input type="text" class="form-control" name="last_name" placeholder="الاسم الاخير/اللقب">
+                        </div>
+                    </div>
+                    <div class="col-md-8 form-group mx-auto">
+                        <input type="text" class="form-control" name="phone" placeholder="رقم الجوال">
+                    </div>
+                    <div class="col-md-8 form-group mx-auto">
+                        <input type="email" class="form-control" name="email" placeholder="البريد الإلكتروني">
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-5 form-group">
+                            <input type="password" class="form-control" name="password1" placeholder="كلمة المرور">
+                        </div>    
+                        <div class="col-md-5 form-group">
+                            <input type="password" class="form-control" name="password2" placeholder="تأكيد كلمة المرور">
+                        </div>
+                    </div>
+                    <div class="form-group text-center my-3">
+                        <button type="submit" class="col-6 btn rounded-pill"><small>تسجيل</small></button>
+                    </div>
+                </form>
+                <div>لديك حساب بالفعل؟ <a href="{% url 'login' %}"> سجل الدخول</a></div>
+                <div class="division">
+                    <div class="row py-4">
+                        <div class="col-2"><div class="line l"></div></div>
+                        <div class="text-center col-8 fw-bold"><span>أو سجل الدخول بواسطة</span></div>
+                        <div class="col-2"><div class="line r"></div></div>
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <div class="col-6">
+                        <a class="social" href="{% url 'social:begin' 'google-oauth2' %}" title="تسجيل الدخول بواسطة حساب جوجل"><i class="fab fa-google"></i></a>
+                    </div>
+                    <div class="col-6">
+                        <a class="social" href="#" title="تسجيل الدخول بواسطة حساب إكس"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

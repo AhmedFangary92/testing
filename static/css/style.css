@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    background-repeat: repeat;
+    background-image: url(../img/background-image.png);
+}
+
+.btn {
+    background: #F4B318;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background: #F4B318;
+    color: white;
+}
+
+.btn:active {
+    background: #F4B318;
+}
+
+.card .fa-x-twitter {
+	color: black;
+}
+
+.card .fa-google {
+	color: #CB5048;
+}
+
+
+.card .division .line {
+	border-top: 1.5px solid white;
+	position: relative;
+	top: 15px;
+}
+
+.card .line.l {
+	right: 20px;
+}
+
+.card .line.r {
+	left: 20px;
+}
+
+.form-control {
+	border: 1px solid;
+	border-radius: 3px;
+	background: #F4B318;
+	margin-bottom: 15px;
+}
+
+.form-control:focus {
+	border: 1px solid;
+	border-radius: 3px;
+	box-shadow: none;
+	background: #F4B318;
+	color: #3C3C3B;
+}
+
+.register-screen .card {
+    border-top: 5px solid #F4B318;
+	background: #3C3C3B;
+	color: #EBE8E2;
+}
+
+.register-screen .card .row .social {
+    text-decoration: none;
+}
+
+.register-screen .card .fab {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background: #F4B318;
+	height: 40px;
+	width: 90px;
+}
+
+.register-screen a {
+    color: #EBE8E2;
+}
+
+.login-screen .card {
+	border: none;
+	border-top: 5px solid #F4B318;
+	background: #3C3C3B;
+	color: #EBE8E2;
+}
+
+.login-screen .card p {
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.login-screen .card .fab {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background: #F4B318;
+	height: 40px;
+	width: 90px;
+}
+
+.login-screen .card .myform a {
+    color: #EBE8E2;
+}
+
+.login-screen .card .row .social {
+    text-decoration: none;
+}
+
+.login-screen .card .far.fa-user {
+	font-size: 13px;
+}
+
